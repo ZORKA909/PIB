@@ -4,13 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Piękne i Bestie | Eventy, Mobilny Bar & Grill</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="shortcut icon" href="favicon.ico">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- NAWIGACJA -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#start" class="logo">Piękne <span>&amp;</span> Bestie</a>
+      <a href="#start" class="logo">
+        <img src="logo.png" alt="Logo" class="logo-img">
+        <div class="logo-brand">
+          <span class="logo-title">PIĘKNE I<br>BESTIE</span>
+          <span class="logo-sub">EVENT &amp; CATERING</span>
+        </div>
+      </a>
       
       <div class="nav-links">
         <a href="#start" class="active">Start</a>
@@ -22,6 +36,7 @@
     </div>
   </nav>
 
+  <!-- SEKCJA 1: STRONA TYTUŁOWA -->
   <header id="start" class="hero">
     <div class="hero-bg">
       <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=2000&q=85" alt="Ciemny bar koktajlowy">
@@ -29,7 +44,7 @@
     </div>
 
     <div class="hero-content">
-      <p class="hero-subtitle">Sztuka Uwodzenia Zmysłów</p>
+      <p class="hero-subtitle">Toruń &bull; Cała Polska</p>
       <h1 class="hero-title">
         Gdzie subtelne piękno <br>
         <span>spotyka żywioł</span>
@@ -48,6 +63,320 @@
       <div class="scroll-line"></div>
     </div>
   </header>
+
+  <!-- SEKCJA 2: OFERTA (5 FILARÓW) -->
+  <section id="oferta" class="offer-section">
+    <div class="offer-container">
+      <div class="section-header-split">
+        <div class="header-left">
+          <p class="section-subtitle">ZAKRES USŁUG</p>
+          <h2 class="section-title">Pięć filarów doskonałego przyjęcia</h2>
+        </div>
+      </div>
+
+      <!-- Zakładki (5 filarów) -->
+      <div class="offer-tabs">
+        <button class="tab-btn active" onclick="switchOffer('bar', this)">01. MOBILNY BAR</button>
+        <button class="tab-btn" onclick="switchOffer('grill', this)">02. MOBILNY GRILL &amp; CATERING</button>
+        <button class="tab-btn" onclick="switchOffer('dekoracje', this)">03. DEKORACJE &amp; SCENOGRAFIA</button>
+        <button class="tab-btn" onclick="switchOffer('scianki', this)">04. ŚCIANKI ZDJĘCIOWE</button>
+        <button class="tab-btn" onclick="switchOffer('wypozyczalnia', this)">05. WYPOŻYCZALNIA SPRZĘTU</button>
+      </div>
+
+      <!-- Karta wybranej usługi -->
+      <div class="offer-card">
+        <div class="offer-image">
+          <img id="offer-img" src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1200&q=85" alt="Mobilny Bar Koktajlowy">
+        </div>
+        <div class="offer-details">
+          <span id="offer-tag" class="offer-tag">Bestie • Sztuka Miksologii</span>
+          <h3 id="offer-title" class="offer-title">Mobilny Bar Koktajlowy</h3>
+          <p id="offer-desc" class="offer-desc">
+            Autorskie koktajle, dymiące infuzje i krystaliczny lód rzemieślniczy. Tworzymy mobilną strefę barową dopasowaną do estetyki Twojego wydarzenia.
+          </p>
+          <ul id="offer-list" class="offer-list">
+            <li>Karta koktajli komponowana indywidualnie pod charakter przyjęcia</li>
+            <li>Własne syropy, kordiały oraz ręcznie cięty lód</li>
+            <li>Kompleksowa obsługa od 20 do 300 gości</li>
+          </ul>
+          <a href="#kontakt" class="btn-primary">Zapytaj o tę usługę</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKCJA 3: KONTAKT & REZERWACJE -->
+  <section id="kontakt" class="contact-section">
+    <div class="contact-container">
+      
+      <!-- LEWA KOLUMNA: DANE KONTAKTOWE -->
+      <div class="contact-info">
+        <p class="section-subtitle">KONTAKT &amp; REZERWACJE</p>
+        <h2 class="contact-title">Porozmawiajmy o<br>Twoim wydarzeniu</h2>
+        <p class="contact-lead">
+          Każdy projekt rozpoczynamy od rozmowy o Twojej wizji, miejscu i charakterze gości. W ciągu 24 godzin wracamy z dopracowaną propozycją scenariusza i wyceny.
+        </p>
+
+        <hr class="contact-divider">
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 21s-6-5.686-6-10a6 6 0 1 1 12 0c0 4.314-6 10-6 10Z"/>
+              <circle cx="12" cy="11" r="2.5"/>
+            </svg>
+            <div>
+              <span class="detail-label">BAZA OPERACYJNA</span>
+              <p class="detail-main">ul. Szosa Chełmińska, 87–100 Toruń</p>
+              <p class="detail-sub">Realizacje na terenie całej Polski</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/>
+            </svg>
+            <div>
+              <span class="detail-label">BEZPOŚREDNI KONTAKT</span>
+              <p class="detail-main">+48 500 600 700</p>
+              <p class="detail-sub">Pon – Sob: 09:00 – 19:00</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <div>
+              <span class="detail-label">ZAPYTANIA OFERTOWE</span>
+              <p class="detail-main">kontakt@piekneibestie.pl</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="contact-divider">
+
+        <div class="contact-socials">
+          <span class="detail-label">OBSERWUJ NAS:</span>
+          <a href="#" class="social-link">INSTAGRAM</a>
+          <a href="#" class="social-link">FACEBOOK</a>
+        </div>
+      </div>
+
+      <!-- PRAWA KOLUMNA: FORMULARZ -->
+      <div class="contact-form-box">
+        <form id="booking-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="name">IMIĘ I NAZWISKO *</label>
+              <input type="text" id="name" placeholder="Jan Kowalski" required>
+            </div>
+            <div class="form-group">
+              <label for="email">ADRES E-MAIL *</label>
+              <input type="email" id="email" placeholder="jan@domena.pl" required>
+            </div>
+          </div>
+
+          <div class="form-row-3">
+            <div class="form-group">
+              <label for="phone">TELEFON *</label>
+              <input type="tel" id="phone" placeholder="+48 000 000 000" required>
+            </div>
+            <div class="form-group">
+              <label for="date">PLANOWANA DATA *</label>
+              <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+              <label for="location">MIEJSCOWOŚĆ / OBIEKT</label>
+              <input type="text" id="location" placeholder="np. Toruń / Dwór...">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="details">WYBRANA KONFIGURACJA I SZCZEGÓŁY</label>
+            <textarea id="details" rows="4" placeholder="Opisz krótko swoje wydarzenie lub wskaż interesujące usługi..."></textarea>
+          </div>
+
+            <!-- ZGODA RODO -->
+          <div class="form-rodo">
+            <input type="checkbox" id="rodo-consent" required>
+            <label for="rodo-consent">
+              Wyrażam zgodę na przetwarzanie moich danych osobowych przez Piękne i Bestie Event &amp; Catering w celu odpowiedzi na zapytanie ofertowe zgodnie z <a href="#" onclick="openPrivacyModal(event)">Polityką Prywatności</a>. *
+            </label>
+          </div>
+
+
+          <button type="submit" class="btn-submit">WYŚLIJ ZAPYTANIE O DOSTĘPNOŚĆ TERMINU</button>
+          <p id="form-feedback" class="form-feedback"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STOPKA -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">PIĘKNE I BESTIE</span>
+        <p class="footer-copy">&copy; 2026 Piękne i Bestie Event &amp; Catering. Wszelkie prawa zastrzeżone.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#start">START</a>
+        <a href="#oferta">OFERTA</a>
+        <a href="#kontakt">KONTAKT</a>
+        <a href="#" onclick="openPrivacyModal(event)">POLITYKA PRYWATNOŚCI</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- OKNO MODALNE: POLITYKA PRYWATNOŚCI -->
+  <div id="privacy-modal" class="modal-overlay" onclick="closePrivacyModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closePrivacyModal(event)">&times;</button>
+      <p class="section-subtitle">DOKUMENTACJA PRAWNA</p>
+      <h2 class="modal-title">Polityka Prywatności i RODO</h2>
+      
+      <div class="modal-body">
+        <h3>1. Administrator Danych Osobowych</h3>
+        <p>
+          Administratorem Twoich danych osobowych jest <strong>[Pełna nazwa firmy / Imię i Nazwisko przedsiębiorcy]</strong> z siedzibą przy ul. Szosa Chełmińska, 87–100 Toruń, NIP: <strong>[Twój numer NIP]</strong>, e-mail: <strong>kontakt@piekneibestie.pl</strong>, tel.: <strong>+48 500 600 700</strong>.
+        </p>
+
+        <h3>2. Cel i podstawa prawna przetwarzania danych</h3>
+        <p>Twoje dane osobowe podane w formularzu kontaktowym (imię i nazwisko, adres e-mail, numer telefonu, planowana data oraz lokalizacja wydarzenia) przetwarzane są w celu:</p>
+        <ul>
+          <li>obsługi zapytania ofertowego, sprawdzenia dostępności terminu oraz przygotowania wyceny (art. 6 ust. 1 lit. b RODO – działania przed zawarciem umowy oraz art. 6 ust. 1 lit. a RODO – zgoda osoby),</li>
+          <li>ewentualnego zawarcia i realizacji umowy na świadczenie usług eventowych i cateringowych (art. 6 ust. 1 lit. b RODO),</li>
+          <li>ustalenia, dochodzenia lub obrony przed ewentualnymi roszczeniami (art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes Administratora).</li>
+        </ul>
+
+        <h3>3. Okres przechowywania danych</h3>
+        <p>
+          Dane przekazane w zapytaniu ofertowym przechowywane są przez okres niezbędny do prowadzenia korespondencji i przedstawienia oferty (nie dłużej niż 12 miesięcy od zakończenia rozmów, o ile nie dojdzie do zawarcia umowy), a w przypadku zawarcia umowy – przez okres wymagany przepisami prawa podatkowego i rachunkowego.
+        </p>
+
+        <h3>4. Odbiorcy danych</h3>
+        <p>
+          Twoje dane nie są sprzedawane podmiotom trzecim. Mogą być przekazywane wyłącznie zaufanym podmiotom wspierającym nas technicznie w prowadzeniu strony i poczty elektronicznej (dostawca hostingu, operator poczty e-mail) na podstawie umów powierzenia przetwarzania danych.
+        </p>
+
+        <h3>5. Twoje prawa</h3>
+        <p>Przysługuje Ci prawo do:</p>
+        <ul>
+          <li>dostępu do swoich danych oraz otrzymania ich kopii,</li>
+          <li>sprostowania (poprawiania) swoich danych,</li>
+          <li>usunięcia danych lub ograniczenia ich przetwarzania,</li>
+          <li>cofnięcia zgody na przetwarzanie danych w dowolnym momencie (bez wpływu na zgodność z prawem przetwarzania dokonanego przed jej cofnięciem),</li>
+          <li>wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa).</li>
+        </ul>
+
+        <h3>6. Dobrowolność podania danych</h3>
+        <p>
+          Podanie danych oznaczonych jako wymagane (*) jest dobrowolne, jednak niezbędne do udzielenia odpowiedzi na zapytanie i przygotowania oferty.
+        </p>
+
+        <h3>7. Pliki cookies i logi serwera</h3>
+        <p>
+          Strona korzysta wyłącznie z niezbędnych plików technicznych oraz czcionek zapewniających prawidłowe wyświetlanie serwisu. Nie stosujemy zewnętrznych narzędzi śledzących ani reklamowych bez Twojej uprzedniej zgody.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const offerData = {
+      bar: {
+        tag: "Bestie • Sztuka Miksologii",
+        title: "Mobilny Bar Koktajlowy",
+        desc: "Autorskie koktajle, dymiące infuzje i krystaliczny lód rzemieślniczy. Tworzymy mobilną strefę barową dopasowaną do estetyki Twojego wydarzenia.",
+        img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1200&q=85",
+        features: [
+          "Karta koktajli komponowana indywidualnie pod charakter przyjęcia",
+          "Własne syropy, kordiały oraz ręcznie cięty lód",
+          "Kompleksowa obsługa od 20 do 300 gości"
+        ]
+      },
+      grill: {
+        tag: "Bestie • Żywy Ogień & Catering",
+        title: "Mobilny Grill & Live Cooking",
+        desc: "Sezonowana wołowina, owoce morza i aromatyczne dania serwowane prosto z rusztu na oczach gości. Spektakl ognia, dymu i wyselekcjonowanych składników.",
+        img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=85",
+        features: [
+          "Live cooking prowadzony przez doświadczonych szefów kuchni",
+          "Autorskie menu mięsne, rybne oraz w pełni roślinne",
+          "Elegancka zastawa i pełna obsługa kelnerska"
+        ]
+      },
+      dekoracje: {
+        tag: "Piękne • Scenografia & Detal",
+        title: "Dekoracje & Florystyka",
+        desc: "Spójna oprawa wizualna przestrzeni. Od nastrojowego oświetlenia świecami, przez szlachetne tkaniny, po kompozycje kwiatowe budujące klimat wieczoru.",
+        img: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=85",
+        features: [
+          "Indywidualny projekt aranżacji sali lub strefy plenerowej",
+          "Kompozycje florystyczne, świece, złote podtalerze i tekstylia",
+          "Pełny montaż oraz demontaż po zakończeniu wydarzenia"
+        ]
+      },
+      scianki: {
+        tag: "Piękne • Strefa Wizerunkowa",
+        title: "Ścianki Zdjęciowe",
+        desc: "Designerskie konstrukcje, welurowe tła, neony i architektoniczne formy stanowiące centralny punkt fotograficzny wesela, gali lub eventu firmowego.",
+        img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=85",
+        features: [
+          "Personalizowane napisy, monogramy oraz podświetlenie LED",
+          "Możliwość połączenia z instalacją kwiatową lub balonową",
+          "Stabilne, estetyczne wykończenie z każdej perspektywy"
+        ]
+      },
+      wypozyczalnia: {
+        tag: "Zaplecze • Logistyka & Sprzęt",
+        title: "Wypożyczalnia Sprzętu Eventowego",
+        desc: "Kompleksowe wyposażenie dla organizatorów i klientów indywidualnych. Meble koktajlowe, zastawa, szkło, oświetlenie oraz infrastruktura plenerowa.",
+        img: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=85",
+        features: [
+          "Stoły koktajlowe, hokery, bary mobilne oraz strefy chillout",
+          "Szkło koktajlowe, porcelana i akcesoria gastronomiczne",
+          "Transport, wniesienie i odbiór na terenie Torunia i całej Polski"
+        ]
+      }
+    };
+
+    function switchOffer(key, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const data = offerData[key];
+      document.getElementById('offer-tag').innerText = data.tag;
+      document.getElementById('offer-title').innerText = data.title;
+      document.getElementById('offer-desc').innerText = data.desc;
+      document.getElementById('offer-img').src = data.img;
+      document.getElementById('offer-img').alt = data.title;
+
+      const listEl = document.getElementById('offer-list');
+      listEl.innerHTML = data.features.map(item => `<li>${item}</li>`).join('');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      feedback.innerText = "Dziękujemy! Twoje zapytanie zostało wysłane. Skontaktujemy się w ciągu 24 godzin.";
+      e.target.reset();
+    }
+    function openPrivacyModal(e) {
+      e.preventDefault();
+      document.getElementById('privacy-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePrivacyModal(e) {
+      if (e) e.preventDefault();
+      document.getElementById('privacy-modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  </script>
 
 </body>
 </html>
