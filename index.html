@@ -32,7 +32,21 @@
         <a href="#kontakt">Kontakt</a>
       </div>
 
-      <a href="#kontakt" class="btn-nav">Zapytaj o termin</a>
+      <div class="nav-actions">
+        <a href="#kontakt" class="btn-nav">Zapytaj o termin</a>
+        <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ROZWIJANE MENU MOBILNE -->
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#start" onclick="toggleMobileMenu()">Start</a>
+      <a href="#oferta" onclick="toggleMobileMenu()">Oferta</a>
+      <a href="#kontakt" onclick="toggleMobileMenu()">Kontakt</a>
     </div>
   </nav>
 
@@ -376,6 +390,12 @@
       document.getElementById('privacy-modal').classList.remove('open');
       document.body.style.overflow = '';
     }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobile-menu').classList.toggle('open');
+      document.querySelector('.menu-toggle').classList.toggle('active');
+    }
+    
   </script>
 
 </body>
